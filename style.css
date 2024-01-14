@@ -1,0 +1,86 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(#1520A6, #2ba0d6); /* Updated gradient background */
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* Use Arial font for simplicity */
+  overflow: hidden; /* Disable scrolling */
+}
+
+#noButton {
+  position: absolute;
+  transition: 0.5s;
+  margin-top: 30px;
+}
+
+#yesButton {
+  position: absolute;
+  margin-right: 150px;
+  margin-top: 30px;
+}
+
+.header_text {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ffffff; /* Updated text color to white */
+}
+
+.text {
+  font-size: 18px; /* Adjusted font size for better readability */
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column; /* Align buttons vertically */
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btn {
+  background: linear-gradient(#0492c2, #1520A6); /* Updated gradient button color */
+  color: #fff;
+  font-weight: bold;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 18px;
+  margin: 10px 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  transition: background 0.3s ease; /* Gradient transition */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background: linear-gradient(#1520A6, #0492c2); /* Darker gradient on hover */
+}
+
+.gif_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  color: #fff;
+  text-align: center;
+}
+
+p a {
+  color: #0492c2; /* Updated link color */
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0.75;
+}

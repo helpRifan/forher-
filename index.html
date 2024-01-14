@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #ffe6f7; /* Light pink background */
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      margin: auto; /* Add auto margin to center the container */
+    }
+
+    .header_text {
+      font-size: 36px;
+      font-weight: bold;
+      color: #ffffff; /* Dark pink text color */
+      margin: 20px 0;
+    }
+
+    .gif_container {
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column; /* Align buttons vertically */
+      align-items: center;
+    }
+
+    .btn {
+      background-color: #ff65a3; /* Pink button color */
+      color: #fff;
+      font-weight: bold;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 18px;
+      margin: 10px 0; /* Increase margin between buttons */
+      cursor: pointer;
+      border: none;
+      border-radius: 12px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn:hover {
+      background-color: #c8c9df; /* Darker pink on hover */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <h1 class="header_text">Do you wanna go out with me?</h1>
+      <h2 class="header_text">💫Mahitha💫</h1>
+    </div>
+
+    <div class="gif_container">
+      <img src="https://media1.tenor.com/m/zGm5acSjHCIAAAAC/cat-begging.gif" alt="Cute animated illustration" />
+    </div>
+
+    <div class="buttons">
+      <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+      <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+    </div>
+  </div>
+
+  <!-- Add this script block to your HTML file, after the existing script block -->
+  <script>
+    function nextPage() {
+      window.location.href = "Yes.html";
+    }
+
+    function moveButton() {
+      var button = document.getElementById("noButton");
+      var buttonRect = button.getBoundingClientRect();
+
+      var maxX = window.innerWidth - buttonRect.width;
+      var maxY = window.innerHeight - buttonRect.height;
+
+      // Check if the button is too close to the edges and adjust its position
+      var x = Math.min(Math.max(0, Math.random() * maxX), maxX);
+      var y = Math.min(Math.max(0, Math.random() * maxY), maxY);
+
+      button.style.left = `${x}px`;
+      button.style.top = `${y}px`;
+
+      // Disable scrolling
+      document.body.style.overflow = "hidden";
+    }
+  </script>
+</body>
+
+</html>
